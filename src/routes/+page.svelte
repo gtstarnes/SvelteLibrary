@@ -5,7 +5,7 @@
 
 <main>
     <h1>Welcome to Home</h1>
-    <Add />
+    <Add message={"Add media"} />
 </main>
 
 
