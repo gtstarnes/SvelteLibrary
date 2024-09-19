@@ -1,8 +1,8 @@
 <script lang='ts'>
-
+    export let message = "Edit to Add Custom Button Message";
 </script>
 
-<button>Add Media</button>
+<button>{message}</button>
 
 <style>
 
