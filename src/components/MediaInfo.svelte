@@ -1,5 +1,7 @@
 <script lang="ts">
     import Add from "./Add.svelte";
+
+    let mediaType = "";
 </script>
 
 <div>
@@ -15,7 +17,7 @@
         </div>
         <div>
             <label for="type">Type: </label>
-            <select name="type" id="type">
+            <select name="type" id="type" bind:value={mediaType}>
                 <option disabled>Media Type</option>
                 <option value="Album">Album</option>
                 <option value="Book">Book</option>
@@ -28,24 +30,32 @@
         <div>
             <label for="genre">Genre: </label>
             <fieldset>
-                <input type="checkbox" name="ActionAdventure" id="ActionAdventure" />
-                <lable for="ActionAdventure">Action / Adventure</lable>
-                <input type="checkbox" name="Horror" id="Horror" />
-                <lable for="Horror">Horror</lable>
-                <input type="checkbox" name="Romance" id="Romance" />
-                <lable for="Romance">Romance</lable>
-                <input type="checkbox" name="Thriller" id="Thriller" />
-                <lable for="Thriller">Thriller</lable>
-                <input type="checkbox" name="Historical" id="Historical" />
-                <lable for="Historical">Historical</lable>
-                <input type="checkbox" name="Historical Fiction" id="Historical Fiction" />
-                <lable for="Historical Fiction">Historical Fiction</lable>
-                <input type="checkbox" name="Drama" id="Drama" />
-                <lable for="Drama">Drama</lable>
-                <input type="checkbox" name="ComicManga" id="ComicManga" />
-                <lable for="ComicManga">Comic / Manga</lable>
-                <input type="checkbox" name="Fantasy" id="Fantasy" />
-                <lable for="Fantasy">Fantasy</lable>
+                {#if mediaType === "Book" || mediaType === "Movie"}
+                <div>
+                    <input type="checkbox" name="ActionAdventure" id="ActionAdventure" />
+                    <lable for="ActionAdventure">Action / Adventure</lable>
+                    <input type="checkbox" name="Horror" id="Horror" />
+                    <lable for="Horror">Horror</lable>
+                    <input type="checkbox" name="Romance" id="Romance" />
+                    <lable for="Romance">Romance</lable>
+                    <input type="checkbox" name="Thriller" id="Thriller" />
+                    <lable for="Thriller">Thriller</lable>
+                    <input type="checkbox" name="Historical" id="Historical" />
+                    <lable for="Historical">Historical</lable>
+                    <input type="checkbox" name="Historical Fiction" id="Historical Fiction" />
+                    <lable for="Historical Fiction">Historical Fiction</lable>
+                    <input type="checkbox" name="Drama" id="Drama" />
+                    <lable for="Drama">Drama</lable>
+                    <input type="checkbox" name="ComicManga" id="ComicManga" />
+                    <lable for="ComicManga">Comic / Manga</lable>
+                    <input type="checkbox" name="Fantasy" id="Fantasy" />
+                    <lable for="Fantasy">Fantasy</lable>
+                </div>
+                {:else if mediaType === "Album"}
+                    <div>
+                        word
+                    </div>
+                {/if}
             </fieldset>
         </div>
         <div>
