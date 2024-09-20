@@ -1,10 +1,62 @@
-<script lang="ts"></script>
+<script lang="ts">
+    import Add from "./Add.svelte";
+</script>
 
 <div>
     <h3>Add New Media Item</h3>
     <form>
-        
+        <div>
+            <label for="title">Title: </label>
+            <input id="title" name="title" type="text" />
+        </div>
+        <div>
+            <label for="creator">Creator: </label>
+            <input id="creator" name="creator" type="text" />
+        </div>
+        <div>
+            <label for="type">Type: </label>
+            <select name="type" id="type">
+                <option disabled>Media Type</option>
+                <option value="Album">Album</option>
+                <option value="Book">Book</option>
+                <option value="Movie">Movie</option>
+                <option value="TV Show">TV Show</option>
+                <option value="Video Game">Video Game</option>
+                <option value="Board Game">Board Game</option>
+            </select>
+        </div>
+        <div>
+            <label for="genre">Genre: </label>
+            <fieldset>
+                <input type="checkbox" name="ActionAdventure" id="ActionAdventure" />
+                <lable for="ActionAdventure">Action / Adventure</lable>
+                <input type="checkbox" name="Horror" id="Horror" />
+                <lable for="Horror">Horror</lable>
+                <input type="checkbox" name="Romance" id="Romance" />
+                <lable for="Romance">Romance</lable>
+                <input type="checkbox" name="Thriller" id="Thriller" />
+                <lable for="Thriller">Thriller</lable>
+                <input type="checkbox" name="Historical" id="Historical" />
+                <lable for="Historical">Historical</lable>
+                <input type="checkbox" name="Historical Fiction" id="Historical Fiction" />
+                <lable for="Historical Fiction">Historical Fiction</lable>
+                <input type="checkbox" name="Drama" id="Drama" />
+                <lable for="Drama">Drama</lable>
+                <input type="checkbox" name="ComicManga" id="ComicManga" />
+                <lable for="ComicManga">Comic / Manga</lable>
+                <input type="checkbox" name="Fantasy" id="Fantasy" />
+                <lable for="Fantasy">Fantasy</lable>
+            </fieldset>
+        </div>
+        <div>
+            <label for="">Release Year</label>
+            <input type="number" />
+        </div>
     </form>
+    <div>
+        <Add message="Add Media" />
+        <Add message="Close" />
+    </div>
 </div>
 
 <style>
