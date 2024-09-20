@@ -30,7 +30,7 @@
         <div>
             <label for="genre">Genre: </label>
             <fieldset>
-                {#if mediaType === "Book" || mediaType === "Movie"}
+                {#if mediaType === "TV Show" || mediaType === "Movie"}
                 <div>
                     <input type="checkbox" name="ActionAdventure" id="ActionAdventure" />
                     <lable for="ActionAdventure">Action / Adventure</lable>
@@ -47,13 +47,28 @@
                     <input type="checkbox" name="Drama" id="Drama" />
                     <lable for="Drama">Drama</lable>
                     <input type="checkbox" name="ComicManga" id="ComicManga" />
-                    <lable for="ComicManga">Comic / Manga</lable>
+                    <lable for="ComicManga">Animation / Anime</lable>
                     <input type="checkbox" name="Fantasy" id="Fantasy" />
                     <lable for="Fantasy">Fantasy</lable>
                 </div>
                 {:else if mediaType === "Album"}
                     <div>
-                        word
+                        <input type="checkbox" name="classical" id="classical" />
+                        <label for="classical">Classical</label>
+                        <input type="checkbox" name="Rock" id="Rock" />
+                        <label for="Rock">Rock</label>
+                        <input type="checkbox" name="Metal" id="Metal" />
+                        <label for="Metal">Metal</label>
+                        <input type="checkbox" name="Jazz" id="Jazz" />
+                        <label for="Jazz">Jazz</label>
+                        <input type="checkbox" name="Country" id="Country" />
+                        <label for="Country">Country</label>
+                        <input type="checkbox" name="Folk" id="Folk" />
+                        <label for="Folk">Folk</label>
+                        <input type="checkbox" name="Rap / Hip Hop" id="Rap / Hip Hop" />
+                        <label for="Rap / Hip Hop">Rap / Hip Hop</label>
+                        <input type="checkbox" name="Electronic" id="Electronic" />
+                        <label for="Electronic">Electronic</label>
                     </div>
                 {/if}
             </fieldset>
