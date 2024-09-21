@@ -3,6 +3,22 @@
     import Add from "./Add.svelte";
 
     export let mediaType = "Book"
+
+ $: creator = () => {
+        switch (mediaType) {
+            case "Album":
+                return "Composer / Band"
+            case "Book":
+                return  "Author"
+            case "Movie":
+            case "TV Show":
+                return "Director"
+            case "Video Game":
+                return "Production Company"
+            default:
+                return "Creator"
+        }
+    }
 </script>
 
 
@@ -13,6 +29,10 @@
     <div>
         <label for="title">Title:</label>
         <input type="text" required />
+    </div>
+    <div>
+        <label for="creator">{creator()}: </label>
+        <input type="text" />
     </div>
     <div>
         <label for="year">Release Year:</label>
