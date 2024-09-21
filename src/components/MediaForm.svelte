@@ -1,4 +1,6 @@
 <script lang="ts">
+    // component imports
+    import Add from "./Add.svelte";
 
     export let mediaType = "Book"
 </script>
@@ -16,6 +18,7 @@
         <label for="year">Release Year:</label>
         <input type="number" max=2024 />
     </div>
+    <Add message="Add Media" />
     {/if}
 </div>
 
