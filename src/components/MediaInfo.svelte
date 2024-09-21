@@ -1,4 +1,5 @@
 <script lang="ts">
+    //component imports
     import Add from "./Add.svelte";
 
     let mediaType = "";
@@ -6,15 +7,7 @@
 
 <div>
     <h3>Add New Media Item</h3>
-    <form>
-        <div>
-            <label for="title">Title: </label>
-            <input id="title" name="title" type="text" />
-        </div>
-        <div>
-            <label for="creator">Creator: </label>
-            <input id="creator" name="creator" type="text" />
-        </div>
+    <form>        
         <div>
             <label for="type">Type: </label>
             <select name="type" id="type" bind:value={mediaType}>
@@ -27,6 +20,15 @@
                 <option value="Board Game">Board Game</option>
             </select>
         </div>
+        <div>
+            <label for="title">Title: </label>
+            <input id="title" name="title" type="text" />
+        </div>
+        <div>
+            <label for="creator">Creator: </label>
+            <input id="creator" name="creator" type="text" />
+        </div>
+
         <div>
             <label for="genre">Genre: </label>
             <fieldset>
