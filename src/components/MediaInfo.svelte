@@ -24,7 +24,6 @@
         <MediaForm {mediaType} />
     </form>
     <div>
-        <Add message="Add Media" />
         <Add message="Close" />
     </div>
 </div>
