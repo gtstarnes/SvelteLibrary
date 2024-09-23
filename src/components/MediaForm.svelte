@@ -38,6 +38,9 @@
         <label for="year">Release Year:</label>
         <input type="number" max=2024 />
     </div>
+    <fieldset>
+        <legend>Media Genre</legend>
+    </fieldset>
     <Add message="Add Media" />
     {/if}
 </div>
