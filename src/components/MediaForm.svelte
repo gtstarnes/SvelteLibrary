@@ -3,7 +3,10 @@
     import Add from "./Add.svelte";
 	import Genres from "./Genres.svelte";
 
-    export let mediaType = "Book"
+    // type imports
+    import type { MediaType } from "../types/types";
+
+    export let mediaType: MediaType = "Book"
 
  $: creator = () => {
         switch (mediaType) {
