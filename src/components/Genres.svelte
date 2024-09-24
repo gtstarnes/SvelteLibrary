@@ -4,12 +4,13 @@
     export let mediaType: keyof typeof genres;
 
     $: media = genres[mediaType];
+    export let mediaGenres: string[] = [];
 </script>
 
 <div class="container">
         {#each media as genre (genre)}
             <div class="item">
-                <input type="checkbox" id={genre} name="genre" />
+                <input type="checkbox" id={genre} name="genre" value={genre} bind:group={mediaGenres} />
                 <label for={genre}>{genre}</label>
             </div>
         {/each}
