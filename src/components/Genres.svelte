@@ -11,7 +11,7 @@
         <div></div>
     {:else}
         {#each media as genre (genre)}
-            <div>
+            <div class="item">
                 <input type="checkbox" id={genre} name="genre" />
                 <label for={genre}>{genre}</label>
             </div>
@@ -21,5 +21,11 @@
 
 
 <style>
-
+ .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+ }
+ .item input, label {
+    cursor: pointer;
+ }
 </style>
