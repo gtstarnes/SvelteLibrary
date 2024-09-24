@@ -8,4 +8,7 @@ export const genres = {
          "Heavy Metal", "Latin", "Pop", "Rock", "World",],
     "Video Game": ["Action / Adventure", "Dance", "Fighting", "FPS", "Horror", "MMO", "Platformer",
          "Puzzle", "RTS", "Shooter-Looter", "Stealth", "Survival",],
+    "TV Show": ["Action", "Comedy", "Drama", "Horror", "Mafia", "Mystery",
+        "Martial Arts", "Silent", "Sports", "Superhero", "Thriller", "Western",],
+    "": [""],
 }
