@@ -7,6 +7,7 @@
     import type { MediaType } from "../types/types";
 
     let mediaType: MediaType = "";
+
 </script>
 
 <div>
