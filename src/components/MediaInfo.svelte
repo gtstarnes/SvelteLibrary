@@ -18,7 +18,6 @@
                 <option value="Movie">Movie</option>
                 <option value="TV Show">TV Show</option>
                 <option value="Video Game">Video Game</option>
-                <option value="Board Game">Board Game</option>
             </select>
         </div>
         <MediaForm {mediaType} />
