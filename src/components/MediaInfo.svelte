@@ -3,7 +3,10 @@
     import Add from "./Add.svelte";
 	import MediaForm from "./MediaForm.svelte";
 
-    let mediaType = "";
+    // type imports
+    import type { MediaType } from "../types/types";
+
+    let mediaType: MediaType = "";
 </script>
 
 <div>
