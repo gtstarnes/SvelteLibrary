@@ -11,16 +11,23 @@
 
  $: creator = () => {
         switch (mediaType) {
+            
             case "Album":
+                mediaGenres = [];
                 return "Composer / Band"
             case "Book":
+                mediaGenres = [];
                 return  "Author"
             case "Movie":
+                mediaGenres = [];
             case "TV Show":
+                mediaGenres = [];
                 return "Director"
             case "Video Game":
+                mediaGenres = [];
                 return "Production Company"
             default:
+                mediaGenres = [];
                 return "Creator"
         }
     }
@@ -47,6 +54,7 @@
         <legend>Genres</legend>
         <Genres {mediaType} bind:mediaGenres />
     </fieldset>
+    <div>{mediaGenres}</div>
     <Add message="Add Media" />
     {/if}
 </div>
