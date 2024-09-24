@@ -1,0 +1,1 @@
+export type MediaType = "Book" | "Album" | "Movie" | "TV Show" | "Video Game" | ""
