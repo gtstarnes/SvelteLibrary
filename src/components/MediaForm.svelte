@@ -7,6 +7,7 @@
     import type { MediaType } from "../types/types";
 
     export let mediaType: MediaType = "Book"
+    let mediaGenres: string[];
 
  $: creator = () => {
         switch (mediaType) {
@@ -43,8 +44,8 @@
         <input type="number" max=2024 />
     </div>
     <fieldset>
-        <legend>Media Genre</legend>
-        <Genres {mediaType}/>
+        <legend>Genres</legend>
+        <Genres {mediaType} bind:mediaGenres />
     </fieldset>
     <Add message="Add Media" />
     {/if}
