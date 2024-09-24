@@ -1,6 +1,7 @@
 <script lang="ts">
     // component imports
     import Add from "./Add.svelte";
+	import Genres from "./Genres.svelte";
 
     export let mediaType = "Book"
 
@@ -40,6 +41,7 @@
     </div>
     <fieldset>
         <legend>Media Genre</legend>
+        <Genres {mediaType}/>
     </fieldset>
     <Add message="Add Media" />
     {/if}
