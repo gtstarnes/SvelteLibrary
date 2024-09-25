@@ -6,4 +6,5 @@ export type LibraryItem = {
     release_year: number,
     creator: string,
     genre: string[]
+    consumed: boolean
 }
