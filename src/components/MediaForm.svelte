@@ -44,15 +44,15 @@
     {:else}
     <div>
         <label for="title">Title:</label>
-        <input type="text" required />
+        <input type="text" id="title" name="title" bind:value={title} required />
     </div>
     <div>
         <label for="creator">{creatorVar()}: </label>
-        <input type="text" />
+        <input type="text" id="creator" name="creator" bind:value={creator} />
     </div>
     <div>
         <label for="year">Release Year:</label>
-        <input type="number" max=2024 />
+        <input type="number" id="year" name="year" bind:value={release_year} max=2024 />
     </div>
     <fieldset>
         <legend>Genres</legend>
