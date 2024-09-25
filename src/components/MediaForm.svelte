@@ -6,10 +6,14 @@
     // type imports
     import type { MediaType } from "../types/types";
 
-    export let mediaType: MediaType = "Book"
-    let mediaGenres: string[];
+    // variables
+    export let mediaType:MediaType = "Book"
+    let mediaGenres:string[];
+    let title:string
+    let creator:string
+    let release_year:number = 2024
 
- $: creator = () => {
+ $: creatorVar = () => {
         switch (mediaType) {
             
             case "Album":
@@ -43,7 +47,7 @@
         <input type="text" required />
     </div>
     <div>
-        <label for="creator">{creator()}: </label>
+        <label for="creator">{creatorVar()}: </label>
         <input type="text" />
     </div>
     <div>
