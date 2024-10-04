@@ -12,28 +12,33 @@
     let title:string
     let creator:string
     let release_year:number = 2024
-
- $: creatorVar = () => {
-        switch (mediaType) {
-            
-            case "Album":
-                mediaGenres = [];
-                return "Composer / Band"
-            case "Book":
-                mediaGenres = [];
-                return  "Author"
-            case "Movie":
-                mediaGenres = [];
-            case "TV Show":
-                mediaGenres = [];
-                return "Director"
-            case "Video Game":
-                mediaGenres = [];
-                return "Production Company"
-            default:
-                mediaGenres = [];
-                return "Creator"
+    $: creatorVar = () => {
+            switch (mediaType) {
+                case "Album":
+                    mediaGenres = [];
+                    return "Composer / Band"
+                case "Book":
+                    mediaGenres = [];
+                    return  "Author"
+                case "Movie":
+                    mediaGenres = [];
+                case "TV Show":
+                    mediaGenres = [];
+                    return "Director"
+                case "Video Game":
+                    mediaGenres = [];
+                    return "Production Company"
+                default:
+                    mediaGenres = [];
+                    return "Creator"
+            }
         }
+
+    // functions
+    const sortGenres = (genreList: string[]) => {
+        return genreList.sort((a,b) => {
+            return a.localeCompare(b)
+        })
     }
 </script>
 
@@ -58,7 +63,7 @@
         <legend>Genres</legend>
         <Genres {mediaType} bind:mediaGenres />
     </fieldset>
-    <div>{mediaGenres}</div>
+    <div>{sortGenres(mediaGenres)}</div>
     <Add message="Add Media" />
     {/if}
 </div>
