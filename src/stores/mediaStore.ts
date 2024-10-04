@@ -11,3 +11,11 @@ const addItem = (item: LibraryItem) => {
         return [item, ...prev]
     })
 }
+
+const deleteItem = (id: number) => {
+    library.update(prev => {
+        return prev.filter(item => {
+            return item.id !== id
+        })
+    })
+}
