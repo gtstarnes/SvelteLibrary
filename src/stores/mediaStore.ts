@@ -5,3 +5,9 @@ import { writable } from "svelte/store";
 import type { LibraryItem } from "../types/types";
 
 const library = writable<LibraryItem[]>([])
+
+const addItem = (item: LibraryItem) => {
+    library.update(prev => {
+        return [item, ...prev]
+    })
+}
